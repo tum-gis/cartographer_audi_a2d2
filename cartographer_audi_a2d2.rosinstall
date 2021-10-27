@@ -1,0 +1,4 @@
+- git: {local-name: cartographer, uri: 'https://github.com/cartographer-project/cartographer.git'}
+- git: {local-name: cartographer_ros, uri: 'https://github.com/cartographer-project/cartographer_ros.git'}
+- git: {local-name: cartographer_audi_a2d2, uri: 'git@github.com:tum-gis/cartographer_audi_a2d2.git'}
+- git: {local-name: a2d2_ros_preparer, uri: 'git@github.com:tum-gis/a2d2_ros_preparer.git'}

@@ -1,0 +1,30 @@
+
+<launch>
+    <arg name="rate" default="1.0"/>
+
+    <param name="/use_sim_time" value="true" />
+
+    <param name="robot_description"
+           textfile="$(find cartographer_audi_a2d2)/urdf/a2d2.urdf"/>
+
+    <node name="cartographer_node" pkg="cartographer_ros"
+          type="cartographer_node" args="
+          -configuration_directory $(find cartographer_audi_a2d2)/configuration_files
+          -configuration_basename a2d2.lua"
+          output="screen">
+        <remap from="points2_1" to="lidar_front_center" />
+        <remap from="points2_2" to="lidar_front_left" />
+        <remap from="points2_3" to="lidar_front_right" />
+        <remap from="points2_4" to="lidar_rear_left" />
+        <remap from="points2_5" to="lidar_rear_right" />
+    </node>
+
+    <node name="cartographer_occupancy_grid_node" pkg="cartographer_ros"
+          type="cartographer_occupancy_grid_node" args="-resolution 0.05" />
+
+    <node name="playbag" pkg="rosbag" type="play"
+          args="--clock -r $(arg rate) $(arg bag_filename)" launch-prefix="bash -c 'sleep 2; $0 $@' " />
+
+    <node name="rviz" pkg="rviz" type="rviz" required="true"
+          args="-d $(find cartographer_audi_a2d2)/configuration_files/demo_a2d2.rviz" />
+</launch>

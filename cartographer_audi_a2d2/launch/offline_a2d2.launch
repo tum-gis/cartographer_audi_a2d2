@@ -1,0 +1,24 @@
+<launch>
+    <arg name="bag_filenames"/>
+    <arg name="no_rviz" default="false"/>
+    <arg name="rviz_config" default="$(find cartographer_audi_a2d2)/configuration_files/demo_a2d2.rviz"/>
+    <arg name="configuration_directory" default="$(find cartographer_audi_a2d2)/configuration_files"/>
+    <arg name="configuration_basenames" default="a2d2.lua"/>
+    <arg name="urdf_filenames" default="$(find cartographer_audi_a2d2)/urdf/a2d2.urdf"/>
+    <arg name="launch_prefix" default=""/>
+
+    <remap from="points2_1" to="lidar_front_center" />
+    <remap from="points2_2" to="lidar_front_left" />
+    <remap from="points2_3" to="lidar_front_right" />
+    <remap from="points2_4" to="lidar_rear_left" />
+    <remap from="points2_5" to="lidar_rear_right" />
+    <include file="$(find cartographer_ros)/launch/offline_node.launch">
+        <arg name="bag_filenames" value="$(arg bag_filenames)"/>
+        <arg name="no_rviz" value="$(arg no_rviz)"/>
+        <arg name="rviz_config" value="$(arg rviz_config)"/>
+        <arg name="configuration_directory" value="$(arg configuration_directory)"/>
+        <arg name="configuration_basenames" value="$(arg configuration_basenames)"/>
+        <arg name="urdf_filenames" value="$(arg urdf_filenames)"/>
+        <arg name="launch_prefix" value="$(arg launch_prefix)"/>
+    </include>
+</launch>

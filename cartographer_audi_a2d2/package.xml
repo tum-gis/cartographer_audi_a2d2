@@ -1,0 +1,20 @@
+
+
+<package format="2">
+    <name>cartographer_audi_a2d2</name>
+    <version>0.8.0</version>
+    <description>The cartographer_audi_a2d2 package</description>
+
+    <maintainer email="benedikt.schwab@tum.de">Benedikt Schwab</maintainer>
+    <license>Apache 2.0</license>
+
+
+    <buildtool_depend>catkin</buildtool_depend>
+
+    <!--<depend>geometry_msgs</depend>
+    <depend>std_msgs</depend>
+
+    <build_depend>message_generation</build_depend>
+
+    <exec_depend>message_runtime</exec_depend>-->
+</package>

@@ -1,0 +1,15 @@
+
+
+<launch>
+  <node name="rviz" pkg="rviz" type="rviz" required="true"
+      args="-d $(find cartographer_audi_a2d2)/configuration_files/demo_a2d2.rviz" />
+  <node name="cartographer_node" pkg="cartographer_ros"
+      type="cartographer_node" args="
+          -configuration_directory $(find cartographer_audi_a2d2)/configuration_files
+          -configuration_basename visualize_pbstream.lua
+          -load_state_filename $(arg pbstream_filename)
+          -load_frozen_state=false
+          -start_trajectory_with_default_topics=false"
+      output="screen">
+  </node>
+</launch>
