@@ -46,7 +46,7 @@ support at `our Contribution page`_.
 .. |license| image:: https://img.shields.io/github/license/tum-gis/cartographer_audi_a2d2.svg
      :alt: Apache 2 license.
      :scale: 100%
-     :target: https://github.com/tum-gis/cartographer_audi_a2d2/blob/main/LICENSE
+     :target: https://github.com/tum-gis/cartographer_audi_a2d2/blob/master/LICENSE
 .. |video| image:: https://j.gifs.com/GRYxW7.gif
     :alt: Cartographer Audi A2D2 Demo
     :scale: 100%
