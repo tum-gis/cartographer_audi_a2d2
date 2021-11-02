@@ -26,9 +26,9 @@ Create the workspace and clone the repo:
     mkdir catkin_ws
     cd catkin_ws
 
-    source /opt/ros/noetic/setup.bash
-    git clone git@github.com:tum-gis/cartographer_audi_a2d2.git src/cartographer_audi_a2d2
-    wstool merge -t src src/cartographer_audi_a2d2/cartographer_audi_a2d2.rosinstall
+    source /opt/ros/noetic/setup.bash    
+    wstool init src
+    wstool merge -t src https://raw.githubusercontent.com/tum-gis/cartographer_audi_a2d2/master/cartographer_audi_a2d2.rosinstall
     wstool update -t src
 
 Install the package dependencies and run catkin for compiling:
