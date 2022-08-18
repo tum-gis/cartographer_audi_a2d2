@@ -2,7 +2,7 @@
 Getting Started
 ===============
 
-Since this package only provides the configurations and launch files, the building and installation is very similar
+Since this package only provides the configurations and launch files, the building and installation are very similar
 to the `Cartographer ROS package`_.
 
 .. _Cartographer ROS package: https://google-cartographer-ros.readthedocs.io/en/latest/compilation.html
