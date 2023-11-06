@@ -13,7 +13,7 @@ Driving Dataset (A2D2)`_ via `A2D2 ROS Preparer`_ and `Cartographer ROS`_.
 .. _Audi Autonomous Driving Dataset (A2D2): https://www.a2d2.audi
 .. _A2D2 ROS Preparer: https://github.com/tum-gis/a2d2_ros_preparer
 .. _Cartographer ROS: https://github.com/cartographer-project/cartographer_ros
-.. |video| image:: https://j.gifs.com/GRYxW7.gif
+.. |video| image:: https://img.youtube.com/vi/4eH1vClFsQg/0.jpg
     :alt: A2D2 ROS Preparer Demo
     :target: https://www.youtube.com/watch?v=4eH1vClFsQg
 
